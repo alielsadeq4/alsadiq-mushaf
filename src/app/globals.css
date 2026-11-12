@@ -1,0 +1,317 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-arabic: var(--font-arabic);
+  --font-quran: var(--font-quran);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-burgundy: var(--burgundy);
+  --color-gold: var(--gold);
+  --color-cream: var(--cream);
+  --color-charcoal: var(--charcoal);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.875rem;
+  /* Brand Identity */
+  --burgundy: #6B0F1A;
+  --gold: #C9A15A;
+  --cream: #F5EFE6;
+  --charcoal: #0E0E12;
+
+  /* Light theme — soft cream backgrounds with burgundy accents */
+  --background: #F7F2EA;
+  --foreground: #1A1418;
+  --card: #FFFBF4;
+  --card-foreground: #1A1418;
+  --popover: #FFFBF4;
+  --popover-foreground: #1A1418;
+  --primary: #6B0F1A;
+  --primary-foreground: #F5EFE6;
+  --secondary: #EFE6D6;
+  --secondary-foreground: #3A2620;
+  --muted: #E8DDC8;
+  --muted-foreground: #6B5D4A;
+  --accent: #C9A15A;
+  --accent-foreground: #1A1418;
+  --destructive: #B91C1C;
+  --border: #DCCBB0;
+  --input: #DCCBB0;
+  --ring: #C9A15A;
+  --chart-1: #6B0F1A;
+  --chart-2: #C9A15A;
+  --chart-3: #8B5A2B;
+  --chart-4: #2D5016;
+  --chart-5: #A87C45;
+  --sidebar: #FFFBF4;
+  --sidebar-foreground: #1A1418;
+  --sidebar-primary: #6B0F1A;
+  --sidebar-primary-foreground: #F5EFE6;
+  --sidebar-accent: #EFE6D6;
+  --sidebar-accent-foreground: #3A2620;
+  --sidebar-border: #DCCBB0;
+  --sidebar-ring: #C9A15A;
+}
+
+.dark {
+  --background: #0E0E12;
+  --foreground: #F5EFE6;
+  --card: #161620;
+  --card-foreground: #F5EFE6;
+  --popover: #161620;
+  --popover-foreground: #F5EFE6;
+  --primary: #C9A15A;
+  --primary-foreground: #0E0E12;
+  --secondary: #1F1F2A;
+  --secondary-foreground: #F5EFE6;
+  --muted: #1F1F2A;
+  --muted-foreground: #A89B85;
+  --accent: #6B0F1A;
+  --accent-foreground: #F5EFE6;
+  --destructive: #EF4444;
+  --border: #2A2A38;
+  --input: #2A2A38;
+  --ring: #C9A15A;
+  --chart-1: #C9A15A;
+  --chart-2: #8B2F3D;
+  --chart-3: #A87C45;
+  --chart-4: #4A6B2A;
+  --chart-5: #6B5D4A;
+  --sidebar: #161620;
+  --sidebar-foreground: #F5EFE6;
+  --sidebar-primary: #C9A15A;
+  --sidebar-primary-foreground: #0E0E12;
+  --sidebar-accent: #1F1F2A;
+  --sidebar-accent-foreground: #F5EFE6;
+  --sidebar-border: #2A2A38;
+  --sidebar-ring: #C9A15A;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "ss01", "cv01";
+  overscroll-behavior-y: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 4px;
+  opacity: 0.4;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Islamic geometric pattern background utility */
+.pattern-bg {
+  background-image:
+    radial-gradient(circle at 50% 50%, var(--accent) 0.5px, transparent 0.5px),
+    radial-gradient(circle at 0% 0%, var(--accent) 0.5px, transparent 0.5px),
+    radial-gradient(circle at 100% 100%, var(--accent) 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px, -12px -12px;
+  opacity: 0.04;
+}
+
+.pattern-arabesque {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='none' stroke='%23C9A15A' stroke-width='0.5' opacity='0.15' d='M20 0L40 20L20 40L0 20Z M20 8L32 20L20 32L8 20Z'/%3E%3C/svg%3E");
+}
+
+/* Glassmorphism for player */
+.glass {
+  background: color-mix(in srgb, var(--card) 85%, transparent);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Quran text styling */
+.quran-text {
+  font-family: var(--font-quran), "Amiri", "Scheherazade New", serif;
+  line-height: 2.4;
+  letter-spacing: 0;
+  word-spacing: 0.1em;
+}
+
+/* Touch targets */
+button,
+a,
+[role="button"] {
+  touch-action: manipulation;
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Range slider styling for audio */
+input[type="range"].audio-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+input[type="range"].audio-slider::-webkit-slider-runnable-track {
+  background: var(--muted);
+  height: 6px;
+  border-radius: 3px;
+}
+input[type="range"].audio-slider::-moz-range-track {
+  background: var(--muted);
+  height: 6px;
+  border-radius: 3px;
+}
+input[type="range"].audio-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-top: -5px;
+  border: 2px solid var(--card);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+input[type="range"].audio-slider::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--card);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Safe area utilities */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Smooth equalizer animation */
+@keyframes equalize {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+.equalizer-bar {
+  animation: equalize 1s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+/* Subtle fade-in for page transitions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+/* Spin slow for ornaments */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spinSlow 30s linear infinite;
+}
+
+/* Gentle gold pulse when the recitation moves to a new ayah —
+   fires once (not infinite) so it reads as a soft "heartbeat",
+   never as a flashing effect. */
+@keyframes ayahPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(201, 161, 90, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(201, 161, 90, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(201, 161, 90, 0);
+  }
+}
+.animate-ayah-pulse {
+  animation: ayahPulse 0.9s ease-out 1;
+}
+
+/* Respect reduced-motion users — disable the pulse entirely */
+@media (prefers-reduced-motion: reduce) {
+  .animate-ayah-pulse {
+    animation: none;
+  }
+}

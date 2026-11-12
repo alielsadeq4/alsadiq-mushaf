@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>غير متصل — الصادق</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Arabic", sans-serif;
+      background: linear-gradient(135deg, #6B0F1A, #C9A15A);
+      color: #F5EFE6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 480px;
+      width: 100%;
+    }
+    .icon {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 2rem;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(10px);
+    }
+    .icon svg {
+      width: 48px;
+      height: 48px;
+      stroke: #F5EFE6;
+    }
+    h1 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1rem;
+      opacity: 0.85;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .button {
+      display: inline-block;
+      padding: 0.875rem 2rem;
+      background: #F5EFE6;
+      color: #6B0F1A;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s;
+    }
+    .button:active { transform: scale(0.98); }
+    .note {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M1 1l22 22M16.72 11.06A10.94 10.94 0 0 1 19 12.55M5 12.55a10.94 10.94 0 0 1 5.17-2.39M10.71 5.05A16 16 0 0 1 22.58 9M1.42 9a15.91 15.91 0 0 1 4.7-2.88M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/>
+      </svg>
+    </div>
+    <h1>أنت غير متصل</h1>
+    <p>
+      يبدو أن الإنترنت غير متاح حاليًا. يمكنك تصفح المحتوى المنزّل مسبقًا
+      من المكتبة، أو المحاولة مرة أخرى عند استعادة الاتصال.
+    </p>
+    <a href="/" class="button">إعادة المحاولة</a>
+    <p class="note">الصادق — منصة الاستماع الإسلامي © 2026</p>
+  </div>
+</body>
+</html>

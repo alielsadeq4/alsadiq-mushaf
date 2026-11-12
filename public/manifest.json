@@ -1,0 +1,178 @@
+{
+  "name": "الصادق — منصة الاستماع الإسلامي",
+  "short_name": "الصادق",
+  "description": "منصة استماع إسلامية صوتية فاخرة — القرآن الكريم، الرقية الشرعية، الأذكار، والصلاة على النبي ﷺ",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F7F2EA",
+  "theme_color": "#6B0F1A",
+  "categories": [
+    "education",
+    "music",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "القرآن الكريم",
+      "short_name": "القرآن",
+      "url": "/quran",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "الرقية الشرعية",
+      "short_name": "الرقية",
+      "url": "/ruqyah",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "أذكار الصباح",
+      "short_name": "الصباح",
+      "url": "/morning",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "أذكار المساء",
+      "short_name": "المساء",
+      "url": "/evening",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "أذكار بعد كل صلاة",
+      "short_name": "بعد الصلاة",
+      "url": "/after-prayer",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "أسماء الله الحسنى",
+      "short_name": "أسماء الله",
+      "url": "/names",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "أذكار متنوعة",
+      "short_name": "أذكار متنوعة",
+      "url": "/adhkar-misc",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "الصلاة على النبي ﷺ",
+      "short_name": "الصلاة",
+      "url": "/salawat",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "السبحة الرقمية",
+      "short_name": "السبحة",
+      "url": "/tasbih",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "مواقيت الصلاة والقبلة",
+      "short_name": "المواقيت",
+      "url": "/prayer-times",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "الحفظ والختمة",
+      "short_name": "الحفظ",
+      "url": "/hifdh",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "سور للصغار",
+      "short_name": "للصغار",
+      "url": "/kids",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [],
+  "id": "/",
+  "scope": "/",
+  "display_override": [
+    "standalone",
+    "browser"
+  ]
+}
