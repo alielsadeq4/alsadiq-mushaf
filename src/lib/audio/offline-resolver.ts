@@ -42,37 +42,3 @@ export async function resolvePlayableUrl(track: AudioTrack): Promise<string> {
   return track.audioUrl;
 }
 
-/**
- * Check if a track is available offline.
- */
-export async function isAvailableOffline(track: AudioTrack): Promise<boolean> {
-  try {
-    const downloads = await downloadsStorage.getAll();
-    return downloads.some(
-      (d) =>
-        d.trackId === track.id ||
-        (d.surahId === track.surahId && d.ayahStart === track.ayahStart)
-    );
-  } catch {
-    return false;
-  }
-}
-
-/**
- * Revoke cached blob URLs (call when the player track changes away).
- */
-export function revokeUrl(trackId: string) {
-  const url = urlCache.get(trackId);
-  if (url) {
-    URL.revokeObjectURL(url);
-    urlCache.delete(trackId);
-  }
-}
-
-/**
- * Clear the entire URL cache.
- */
-export function clearUrlCache() {
-  urlCache.forEach((url) => URL.revokeObjectURL(url));
-  urlCache.clear();
-}

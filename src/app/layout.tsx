@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Cairo, Amiri, Noto_Kufi_Arabic } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/toaster";
 import { Toaster as SonnerToaster } from "@/components/ui/sonner";
 import { AppShell } from "@/components/layout/app-shell";
 import { ThemeProvider } from "@/components/layout/theme-provider";
@@ -114,7 +113,6 @@ export default function RootLayout({
           <PlayerProvider>
             <AppShell>{children}</AppShell>
             <PWARegister />
-            <Toaster />
             <SonnerToaster position="top-center" richColors />
           </PlayerProvider>
         </ThemeProvider>

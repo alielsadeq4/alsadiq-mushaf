@@ -2,7 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const OUT_DIR = "/home/z/my-project/src/data/quran-text";
+const OUT_DIR = path.join(__dirname, "..", "public", "quran-text");
 if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 
 async function main() {

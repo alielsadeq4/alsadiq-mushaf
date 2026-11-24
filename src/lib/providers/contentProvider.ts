@@ -215,31 +215,6 @@ export function buildSurahTrack(
   };
 }
 
-/**
- * Build an ayah-range queue (for "play from ayah X to ayah Y" feature).
- */
-export function buildAyahRangeTracks(
-  surahId: number,
-  fromAyah: number,
-  toAyah: number,
-  reciterId?: string
-): AudioTrack[] {
-  const tracks: AudioTrack[] = [];
-  for (let a = fromAyah; a <= toAyah; a++) {
-    const t = buildAyahTrack(surahId, a, reciterId);
-    if (t) tracks.push(t);
-  }
-  return tracks;
-}
-
-// =========================================================================
-// Ruqyah track builder
-// =========================================================================
-
-/**
- * Build a Ruqyah audio track. Ruqyah audio = recitation of Al-Fatihah +
- * the three Quls + other protective verses. We use a queue of these.
- */
 export function buildRuqyahTrack(ruqyahId: string): AudioTrack | null {
   const ruqyah = getRuqyahById(ruqyahId);
   if (!ruqyah) return null;
@@ -297,15 +272,6 @@ export function buildRuqyahQueueTracks(ruqyahId: string): AudioTrack[] {
 // Dhikr / Salawat tracks (text-based, no audio)
 // =========================================================================
 
-export function buildDhikrTrack(_dhikrId: string): AudioTrack | null {
-  // Adhkar are text-based — counter UX is used instead
-  return null;
-}
-
-export function buildSalawatTrack(_salawatId: string): AudioTrack | null {
-  // Salawat is text-based — counter UX is used instead
-  return null;
-}
 
 // =========================================================================
 // Search — مع تطبيع عربي (إزالة التشكيل وتوحيد الهمزات) ليعمل البحث

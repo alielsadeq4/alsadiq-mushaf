@@ -45,10 +45,5 @@ export async function getSurahTafsir(surah: number): Promise<TafsirVerse[]> {
   }
 }
 
-/** Get tafsir for a single ayah. Returns empty string if unavailable. */
-export async function getAyahTafsir(surah: number, ayah: number): Promise<string> {
-  const verses = await getSurahTafsir(surah);
-  return verses.find((v) => v.n === ayah)?.text || "";
-}
 
 export const TAFSIR_SOURCE = "التفسير الميسر — مجمع الملك فهد لطباعة المصحف الشريف";

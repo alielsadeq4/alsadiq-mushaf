@@ -235,7 +235,7 @@ public/sw.js + manifest.json + offline.html + icons/   # طبقة PWA (v1.1.0، 
 ## 9) معلومات تشغيل سريعة
 
 ```bash
-npm install        # أو bun install
+npm install
 npm run dev        # http://localhost:3000
 npm run build      # التحقق قبل أي تسليم
 ```

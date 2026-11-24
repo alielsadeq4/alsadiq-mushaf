@@ -48,8 +48,3 @@ export async function getSurahTranslation(surah: number): Promise<TranslationVer
   }
 }
 
-/** Get translation for a single ayah. Returns empty string if unavailable. */
-export async function getAyahTranslation(surah: number, ayah: number): Promise<string> {
-  const verses = await getSurahTranslation(surah);
-  return verses.find((v) => v.n === ayah)?.text || "";
-}

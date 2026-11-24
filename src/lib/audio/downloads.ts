@@ -157,20 +157,6 @@ export async function downloadSurah(
   return successCount;
 }
 
-/**
- * Cancel an active download.
- */
-export function cancelDownload(trackId: string) {
-  const controller = activeDownloads.get(trackId);
-  if (controller) {
-    controller.abort();
-    activeDownloads.delete(trackId);
-  }
-}
-
-/**
- * Delete a downloaded track from IndexedDB.
- */
 export async function deleteDownload(id: string, blobKey: string) {
   await downloadsStorage.remove(id);
   await downloadsStorage.removeBlob(blobKey);

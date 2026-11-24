@@ -109,7 +109,7 @@
 
 ### المتطلبات
 - Node.js 18.17 أو أحدث
-- npm / yarn / bun
+- npm
 
 ### الخطوات
 
@@ -119,13 +119,13 @@ git clone https://github.com/USERNAME/sadik.git
 cd sadik
 
 # 2. تثبيت الحزم
-npm install   # أو: bun install / yarn install
+npm install
 
 # 3. نسخ ملف البيئة (اختياري — يعمل بدونه)
 cp .env.example .env.local
 
 # 4. التشغيل في وضع التطوير
-npm run dev   # أو: bun run dev
+npm run dev
 
 # 5. افتح المتصفح على
 http://localhost:3000

@@ -177,19 +177,6 @@ export const sessionStorage = {
   },
 };
 
-// Goals
-export const goalStorage = {
-  get(): ListenGoal | null {
-    return lsGet<ListenGoal | null>("goal", null);
-  },
-  set(goal: ListenGoal) {
-    lsSet("goal", goal);
-  },
-  clear() {
-    lsRemove("goal");
-  },
-};
-
 // Notifications
 export const notificationStorage = {
   getAll(): NotificationSetting[] {
